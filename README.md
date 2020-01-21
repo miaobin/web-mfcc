@@ -2,7 +2,7 @@
 
 Calculate Mel-frequency cepstral coefficients (MFCCs) in the browser from prepared audio or receive live audio input from the microphone using Javascript [Web Audio API](https://github.com/WebAudio/web-audio-api).
 
-Implement and accelerate Tensorflow 'AudioSpectrogram' and 'Mfcc' operators by compiling the TensorFlow [lite/kernels](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/kernels) use [emscripten](emscripten.org).
+Implement and accelerate Tensorflow 'AudioSpectrogram' and 'Mfcc' operators by compiling the [TensorFlow/lite/kernels](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/kernels) use [emscripten](emscripten.org). So it uses the same parameters as TensorFlow.
 
 
 # Compile the code
@@ -31,7 +31,12 @@ Implement and accelerate Tensorflow 'AudioSpectrogram' and 'Mfcc' operators by c
     ```
 
 # Run the example
-1. Put the wasm files to the sample folder:
+1. Download [release package](https://github.com/miaobin/web-mfcc/releases) and unzip it.
+    ```
+    tar xzvf web-mfcc-version.tar.gz
+    ```
+
+2. Put it in to the sample folder:
     ```
     example
     ├── favicon.ico
@@ -43,14 +48,14 @@ Implement and accelerate Tensorflow 'AudioSpectrogram' and 'Mfcc' operators by c
     └── yes.wav
     ```
 
-2. Start an http server in the example folder. You can install [http-server](https://github.com/indexzero/http-server) via:
+3. Start an http server in the example folder. You can install [http-server](https://github.com/indexzero/http-server) via:
     ```
     npm install http-server -g
 
     http-server
     ```
-3. Open up the browser and access this URL:
+4. Open up the browser and access this URL:
     
     http://localhost:8080/
 
-4. Click on Play button to see results from console.
+5. Click on Play button to see results from console.
